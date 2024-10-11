@@ -30,7 +30,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <div className="text-center text-white">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Cultivate Your Social Media Success</h1>
-                <p className="text-xl mb-8">Expert consulting to grow your brand organically on social platforms</p>
+                <p className="text-xl mb-8">Expert consulting to grow your brand on social platforms</p>
                 <a href="#contact" className="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition duration-300 inline-block">Get Started</a>
               </div>
             </div>
