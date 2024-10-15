@@ -16,6 +16,7 @@ const Header = () => {
             <li><Link to="/#about" className="text-stone-600 hover:text-green-600 transition duration-300">About</Link></li>
             <li><Link to="/#contact" className="text-stone-600 hover:text-blue-600 transition duration-300">Contact</Link></li>
             <li><Link to="/employees" className="text-stone-600 hover:text-purple-600 transition duration-300">Our Team</Link></li>
+            <li><Link to="/portfolio" className="text-stone-600 hover:text-pink-600 transition duration-300">Portfolio</Link></li>
           </ul>
         </nav>
       </div>

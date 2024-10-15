@@ -7,6 +7,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import EmployeeSummary from './components/EmployeeSummary';
+import Portfolio from './components/Portfolio';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               </>
             } />
             <Route path="/employees" element={<EmployeeSummary />} />
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </main>
         <Footer />
