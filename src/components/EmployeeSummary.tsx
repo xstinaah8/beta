@@ -1,50 +1,50 @@
 import React from 'react';
+import { User } from 'lucide-react';
 
 interface Employee {
   name: string;
   position: string;
+  image: string;
 }
 
 const employees: Employee[] = [
-  { name: 'John Doe', position: 'Software Engineer' },
-  { name: 'Jane Smith', position: 'UX Designer' },
-  { name: 'Mike Johnson', position: 'Project Manager' },
+  { name: 'John Doe', position: 'Software Engineer', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80' },
+  { name: 'Jane Smith', position: 'UX Designer', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80' },
+  { name: 'Mike Johnson', position: 'Project Manager', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80' },
 ];
-
-interface Employee {
-  name: string;
-  position: string;
-}
-
 
 const EmployeeSummary: React.FC = () => {
   return (
-    <div>
-      <header className="relative mb-8">
-          src="../images/zen-garden.jpg"
-          alt="Zen Garden"
-          className="w-full h-64"
-          layout="fullWidth"
-          objectFit="cover"
-
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white">Our Team</h1>
+    <section className="py-32 bg-gradient-to-br from-stone-100 to-stone-200 relative">
+      <div className="absolute inset-0 bg-opacity-5 bg-emerald-500 z-0"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="mb-24 relative">
+          <div
+            className="absolute inset-0 bg-cover bg-center z-0"
+            style={{
+              backgroundImage: `url('https://images.unsplash.com/photo-1464982326199-86f32f81b211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
+              filter: 'brightness(0.7)'
+            }}
+          ></div>
+          <h2 className="text-5xl font-bold text-center py-24 text-white font-sans tracking-tight relative z-10">
+            Meet Our Team
+          </h2>
         </div>
-      </header>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
           {employees.map((employee, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-
-                  width={200}
-                  height={200}
-                  text={`${employee.name[0]}${employee.name.split(' ')[1][0]}`}
-                  className="w-24 h-24 rounded-full mx-auto mb-4"
-                <h2 className="text-xl font-semibold text-center text-gray-800">
+            <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition duration-500 transform hover:-translate-y-4 hover:rotate-1">
+              <div className="p-8">
+                <div className="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden">
+                  <img
+                    src={employee.image}
+                    alt={employee.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-2xl font-semibold text-center text-stone-800 mb-2">
                   {employee.name}
-                </h2>
-                <p className="text-center text-gray-600">
+                </h3>
+                <p className="text-center text-stone-600 font-light text-lg">
                   {employee.position}
                 </p>
               </div>
@@ -52,7 +52,7 @@ const EmployeeSummary: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
