@@ -1,5 +1,6 @@
 import React from 'react';
 import { Leaf } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,9 +12,10 @@ const Header = () => {
         </div>
         <nav>
           <ul className="flex space-x-6">
-            <li><a href="#services" className="text-stone-600 hover:text-orange-600 transition duration-300">Services</a></li>
-            <li><a href="#about" className="text-stone-600 hover:text-green-600 transition duration-300">About</a></li>
-            <li><a href="#contact" className="text-stone-600 hover:text-blue-600 transition duration-300">Contact</a></li>
+            <li><Link to="/#services" className="text-stone-600 hover:text-orange-600 transition duration-300">Services</Link></li>
+            <li><Link to="/#about" className="text-stone-600 hover:text-green-600 transition duration-300">About</Link></li>
+            <li><Link to="/#contact" className="text-stone-600 hover:text-blue-600 transition duration-300">Contact</Link></li>
+            <li><Link to="/employees" className="text-stone-600 hover:text-purple-600 transition duration-300">Our Team</Link></li>
           </ul>
         </nav>
       </div>
